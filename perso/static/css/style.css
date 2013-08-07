@@ -7,6 +7,15 @@ header .contact .icon, .header .contat .icon {
     height: 40px;
 }
 
+header .contact a, .header .contact a {
+    color: #222;
+}
+
+header .contact a:focus, header .contact a:hover,
+.header .contact a:focus, .header .contact a:hover{
+    color: #333;
+}
+
 span.icon-mobile-2 a {
     display: none;
 }
@@ -30,14 +39,21 @@ span.icon-mobile-2 a.mobile-only {
 /* NAV */
 
 [data-magellan-expedition] [data-magellan-arrival] {
-    border-radius: 3px;
-    padding: 5px;
     text-align: center;
 }
 [data-magellan-expedition] [data-magellan-arrival].active {
     background-color: #919EA0;
+    -webkit-border-radius: 1000px;
+    border-radius: 1000px;
+    font-weight: bold;
+    padding: 0.1875em 0.5625em;
 
 }
+[data-magellan-expedition] [data-magellan-arrival] a {
+    color: #999999;
+    font-size: 0.875em;
+}
+
 [data-magellan-expedition] [data-magellan-arrival].active a {
     color: #fff;
 }
