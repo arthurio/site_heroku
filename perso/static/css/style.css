@@ -1,0 +1,75 @@
+/* HEADER */
+header, .header {
+    background-color: #2582BC;
+}
+
+header .contact .icon, .header .contat .icon {
+    height: 40px;
+}
+
+span.icon-mobile-2 a {
+    display: none;
+}
+
+span.icon-mobile-2 a.mobile-only {
+    display: block;
+}
+
+@media only screen {
+    span.icon-mobile-2 a {
+        display: block;
+    }
+    span.icon-mobile-2 a.mobile-only {
+        display: none;
+    }
+}
+
+
+/* END HEADER */
+
+/* NAV */
+
+[data-magellan-expedition] [data-magellan-arrival] {
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+}
+[data-magellan-expedition] [data-magellan-arrival].active {
+    background-color: #919EA0;
+
+}
+[data-magellan-expedition] [data-magellan-arrival].active a {
+    color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+    [data-magellan-expedition] > div {
+        margin: -0.25em auto 1.125em;
+        max-width: 62.5em;
+    }
+}
+/* END NAV */
+
+/* CONTENT */
+#content .row {
+}
+
+#content .row .large-12 hr {
+    margin: 1.25em 0 -1.75em 0;
+}
+
+#content .row .large-12 h3 {
+    margin: auto;
+    background: #FFF;
+    color: #2582BC;
+    width: 50%;
+    padding: .3em;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    #content .row .large-12 h3 {
+        width: 30%;
+    }
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="all">
+	<title>Arthur Rio</title>
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/profile.png">
+    <!-- FONTS -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic" rel="stylesheet" type="text/css">
+    <!-- CSS -->
+    <link href="{{ STATIC_URL }}css/fontello.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/foundation.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    <!-- JAVASCRIPT -->
+    <script src="{{ STATIC_URL }}js/vendor/custom.modernizr.js"></script>
+</head>
+<body>
+    <header class="header" data-magellan-destination="header" id="header">
+        {% include "header.html" %}
+    </header>
+
+    <div class="nav">
+        {% include "nav.html" %}
+    </div>
+
+    <div id="content">
+        {% include "content.html" %}
+    </div>
+
+    <footer class="fotter">
+        {% include "footer.html" %}
+    </footer>
+
+    <!-- Check for Zepto support, load jQuery if necessary -->
+    <script>
+        document.write('<script src={{ STATIC_URL }}/js/vendor/'
+            + ('__proto__' in {} ? 'zepto' : 'jquery')
+            + '.js><\/script>');
+    </script>
+    <script src="{{ STATIC_URL }}js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+
+
+</body>
+</html>
+
