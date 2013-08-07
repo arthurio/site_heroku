@@ -16,19 +16,27 @@ header .contact a:focus, header .contact a:hover,
     color: #333;
 }
 
-span.icon-mobile-2 a {
+header .contact .row {
+    height: 69px;
+}
+
+span.content {
+    display: inline-block;
+}
+
+.mobile span.content a {
     display: none;
 }
 
-span.icon-mobile-2 a.mobile-only {
+.mobile span.content a.mobile-only {
     display: block;
 }
 
 @media only screen {
-    span.icon-mobile-2 a {
+    .mobile span.content a {
         display: block;
     }
-    span.icon-mobile-2 a.mobile-only {
+    .mobile span.content a.mobile-only {
         display: none;
     }
 }
