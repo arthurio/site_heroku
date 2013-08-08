@@ -78,16 +78,6 @@ div.icon:before {
     margin: -0.25em auto 1.125em;
 }
 
-@media only screen and (max-width: 768px) {
-    [data-magellan-expedition] {
-        padding: 10px 0;
-    }
-
-    [data-magellan-expedition] .sub-nav {
-        padding: 0;
-    }
-}
-
 [data-magellan-expedition] [data-magellan-arrival] {
     text-align: center;
 }
@@ -109,12 +99,7 @@ div.icon:before {
 }
 
 .small-block-grid-3.large-block-grid-6 > li {
-    padding: 0 0.625em 0.2em;
-}
-@media only screen and (min-width: 768px) {
-    .small-block-grid-3.large-block-grid-6 > li {
-        padding: 0 0.625em 1.25em;
-    }
+    padding: 0 0.625em 1.25em;
 }
 /* END NAV */
 
