@@ -1,42 +1,76 @@
 /* HEADER */
-header, .header {
+.header {
     background-color: #2582BC;
 }
 
-header .contact .icon, .header .contat .icon {
-    height: 40px;
-}
-
-header .contact a, .header .contact a {
+#address {
     color: #222;
 }
 
-header .contact a:focus, header .contact a:hover,
+
+.header .contat .icon {
+}
+
+.header .contact a {
+    color: #222;
+}
+
 .header .contact a:focus, .header .contact a:hover{
-    color: #333;
+    color: #2582BC;
+    background: #222;
 }
 
-header .contact .row {
-    height: 69px;
+.header ul.small-block-grid-3.large-block-grid-3 {
+    margin-top: 0.625em;
 }
 
-span.content {
-    display: inline-block;
+div.icon:before {
+    font-size: 1.5em;
 }
 
-.mobile span.content a {
-    display: none;
+.header .contact li .inner {
+    text-align: center;
+    background: #1F72A6;
 }
 
-.mobile span.content a.mobile-only {
-    display: block;
+.header .contact li .inner > a {
+    padding: 0.5em 0;
 }
 
 @media only screen {
-    .mobile span.content a {
+    .large-block-grid-3>li {
+        padding: 0 0.625em 0.625em;
+    }
+}
+
+.header ul li .inner a {
+    display: block;
+}
+
+.header ul li.mobile .inner a {
+    display: none;
+}
+
+.header ul li.mobile .inner a.mobile-only {
+    display: block;
+}
+
+@media only screen and (min-width: 1280px) {
+    .header ul li .inner a div.icon:before {
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .header ul li .inner a div.icon:before {
+        font-size: 2em;
+    }
+}
+
+@media only screen {
+    .header ul li.mobile .inner .mobile a {
         display: block;
     }
-    .mobile span.content a.mobile-only {
+    .header ul li.mobile .inner .mobile a.mobile-only {
         display: none;
     }
 }
