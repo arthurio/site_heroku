@@ -118,6 +118,10 @@ div.icon:before {
     border-top: none;
 }
 
+.section-container.vertical-tabs>section>.title a, .section-container.vertical-tabs>.section>.title a {
+    color: #222;
+}
+
 [data-section='vertical-tabs']>section.active>[data-section-content], [data-section='vertical-tabs']>section.active>.content, .section-container.vertical-tabs>section.active>[data-section-content], .section-container.vertical-tabs>section.active>.content {
     background: #B6C5C7;
     border: none;
@@ -133,7 +137,7 @@ div.icon:before {
 }
 
 .section-container.vertical-tabs>section>.title {
-    background: #B6C5C7;
+    background: #222;
     border: none;
 }
 
