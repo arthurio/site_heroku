@@ -114,36 +114,105 @@ div.icon:before {
     text-align: center;
 }
 
-.section-container.auto, .section-container.vertical-tabs, .section-container.vertical-nav, .section-container.horizontal-nav, .section-container.accordion {
-    border-top: none;
+.section-container.vertical-tabs {
+    border: none;
+    margin: 0;
 }
 
-.section-container.vertical-tabs>section>.title a, .section-container.vertical-tabs>.section>.title a {
+.section-container.vertical-tabs>section>.title a {
+    height: 7.5em;
     color: #222;
+    white-space: initial;
+    text-align: center;
+    padding: 1.5em 0.3em;
 }
 
-[data-section='vertical-tabs']>section.active>[data-section-content], [data-section='vertical-tabs']>section.active>.content, .section-container.vertical-tabs>section.active>[data-section-content], .section-container.vertical-tabs>section.active>.content {
-    background: #B6C5C7;
+.section-container.vertical-tabs>section>.title a span.icon:before {
+    font-size: 1.5em;
+}
+
+.section-container.vertical-tabs>section.active>.content {
+    background: #fefefe;
     border: none;
     min-height: 0 !important;
 }
 
-[data-section='vertical-tabs']>section.active>[data-section-title], [data-section='vertical-tabs']>section.active>.title, .section-container.vertical-tabs>section.active>[data-section-title], .section-container.vertical-tabs>section.active>.title {
-    background: #919EA0;
+.section-container.vertical-tabs>section.active {
+    padding-left: 7.9em;
 }
 
-.section-container.vertical-tabs>section>.title:hover {
-    background: #919EA0;
+.section-container.vertical-tabs>section>.title,
+.section-container.vertical-tabs>section.active>.title{
+    width: 7em;
 }
 
 .section-container.vertical-tabs>section>.title {
-    background: #222;
     border: none;
+    margin-top: 0;
 }
 
-@media only screen and (min-width: 768px) {
-    #content .row .large-12 h3 {
-        width: 30%;
+.section-container.vertical-tabs>section.active>.title a,
+.section-container.vertical-tabs>section>.title:hover a {
+    color: #222!important;
+}
+
+@media only screen and (max-width: 768px) {
+    .section-container.vertical-tabs>section>.title a {
+        text-align: center;
+        height: auto;
     }
 
+}
+
+.section-container.vertical-tabs>section>.title.qualifications a {
+    border-left: 0.5em solid #EF4748;
+    color: #EF4748;
+    padding-top: 2.3em;
+}
+
+.section-container.vertical-tabs>section.active>.title.qualifications,
+.section-container.vertical-tabs>section>.title.qualifications:hover {
+    background: #EF4748;
+}
+
+.section-container.vertical-tabs>section>.title.experience a {
+    border-left: 0.5em solid #DCB80B;
+    color: #DCB80B;
+}
+
+.section-container.vertical-tabs>section.active>.title.experience,
+.section-container.vertical-tabs>section>.title.experience:hover {
+    background: #DCB80B;
+}
+
+.section-container.vertical-tabs>section>.title.skills a {
+    border-left: 0.5em solid #26A86A;
+    color: #26A86A;
+}
+
+.section-container.vertical-tabs>section.active>.title.skills,
+.section-container.vertical-tabs>section>.title.skills:hover {
+    background: #26A86A;
+}
+
+.section-container.vertical-tabs>section>.title.education a {
+    border-left: 0.5em solid #B972D5;
+    color: #B972D5;
+    padding-top: 2.3em;
+}
+
+.section-container.vertical-tabs>section.active>.title.education,
+.section-container.vertical-tabs>section>.title.education:hover {
+    background: #B972D5;
+}
+
+.section-container.vertical-tabs>section>.title.hobbies a {
+    border-left: 0.5em solid #E4540D;
+    color: #E4540D;
+    padding-top: 2.3em;
+}
+
+.section-container.vertical-tabs>section.active>.title.hobbies,
+.section-container.vertical-tabs>section>.title.hobbies:hover {
+    background: #E4540D;
 }
