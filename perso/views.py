@@ -4,9 +4,9 @@ from django.template import RequestContext
 import logging
 logger = logging.getLogger(__name__)
 
-def home(request):
+def index(request):
     template_context={}
-    return render_to_response('home.html', template_context, RequestContext(request))
+    return render_to_response('index.html', template_context, RequestContext(request))
 
 def robots(request):
     template_context={}
