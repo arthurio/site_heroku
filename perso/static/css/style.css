@@ -13,8 +13,17 @@
     color: #222;
 }
 
-.header .title h4 {
-    white-space: nowrap;
+.header .title h1 {
+    margin-bottom: 0.25em;
+}
+
+h1, h2, h3 {
+    font-family: "lato";
+    font-weight: 400;
+}
+
+.header .title h2, .header .title h3 {
+    color: #e2e2e2;
 }
 
 .header .contact a:focus, .header .contact a:hover{
@@ -109,112 +118,155 @@ div.icon:before {
 
 /* CONTENT */
 
-.section-container.vertical-tabs {
-    border: none;
+.content h2:before, .content h3:before {
+    content: "+";
+    color: #B972D5;
+    font-size: 1.2em;
+    margin-right: 0.2em;
 }
 
-.section-container.vertical-tabs>section>.title a {
-    color: #555;
-    text-align: left;
-    padding-left: 4em;
-}
+    /* SIDEBAR */
 
-.section-container.vertical-tabs>section>.title a span.icon:before {
-    font-size: 1.5em;
-    position: absolute;
-    margin-left: -2em;
-}
+    .section-container.vertical-tabs {
+        border: none;
+    }
 
-.section-container.vertical-tabs>section.active>.content {
-    background: #efefef;
-    border: none;
-    min-height: 0 !important;
-    margin: 0.5em;
-}
-
-.section-container.vertical-tabs>section.active {
-}
-
-.section-container.vertical-tabs>section>.title,
-.section-container.vertical-tabs>section.active>.title{
-}
-
-.section-container.vertical-tabs>section>.title {
-    border: none;
-    margin-top: 0;
-}
-
-.section-container.vertical-tabs>section>.title:hover a {
-    background: #d5d5d5;
-}
-
-.section-container.vertical-tabs>section.active>.title a {
-    color: #fff!important;
-    background: #4d4d4d;
-}
-
-@media only screen and (max-width: 768px) {
     .section-container.vertical-tabs>section>.title a {
-        text-align: center;
+        color: #555;
+        text-align: left;
+        padding-left: 4em;
+    }
+
+    .section-container.vertical-tabs>section>.title a span.icon:before {
+        font-size: 1.5em;
+        position: absolute;
+        margin-left: -2em;
+    }
+
+    .section-container.vertical-tabs>section.active>.content {
+        background: #efefef;
+        border: none;
+        min-height: 0 !important;
+        margin: 0.5em;
+    }
+
+    .section-container.vertical-tabs>section.active {
+    }
+
+    .section-container.vertical-tabs>section>.title,
+    .section-container.vertical-tabs>section.active>.title{
     }
 
     .section-container.vertical-tabs>section>.title {
-        border-bottom: 1px solid #ccc;
+        border: none;
+        margin-top: 0;
     }
 
-}
+    .section-container.vertical-tabs>section>.title:hover a {
+        background: #d5d5d5;
+    }
 
-.section-container.vertical-tabs>section>.title a {
-    border-left: 0.4em solid #ccc;
-}
+    .section-container.vertical-tabs>section.active>.title a {
+        color: #fff!important;
+        background: #4d4d4d;
+    }
 
-.section-container.vertical-tabs>section.active>.title.profile a,
-.section-container.vertical-tabs>section>.title.profile a:hover,
-.section-container.vertical-tabs>section>.title.profile a:focus {
-    border-left: 0.4em solid #B972D5;
-}
+    @media only screen and (max-width: 768px) {
+        .section-container.vertical-tabs>section>.title {
+            border-bottom: 1px solid #ccc;
+        }
+    }
 
-.section-container.vertical-tabs>section.active>.title.profile span:before {
-    color: #B972D5;
-}
+    .section-container.vertical-tabs>section>.title a {
+        border-left: 0.4em solid #ccc;
+    }
 
-.section-container.vertical-tabs>section.active>.title.qualifications a,
-.section-container.vertical-tabs>section>.title.qualifications a:hover,
-.section-container.vertical-tabs>section>.title.qualifications a:focus {
-    border-left: 0.4em solid #DCB80B;
-}
+    .section-container.vertical-tabs>section.active.profile>.title a,
+    .section-container.vertical-tabs>section.profile>.title a:hover,
+    .section-container.vertical-tabs>section.profile>.title a:focus {
+        border-left: 0.4em solid #B972D5;
+    }
 
-.section-container.vertical-tabs>section.active>.title.qualifications span:before {
-    color: #DCB80B;
-}
+    .section-container.vertical-tabs>section.active.profile>.title span:before {
+        color: #B972D5;
+    }
 
-.section-container.vertical-tabs>section.active>.title.experience a,
-.section-container.vertical-tabs>section>.title.experience a:hover,
-.section-container.vertical-tabs>section>.title.experience a:focus {
-    border-left: 0.4em solid #2582BC;
-}
+    .section-container.vertical-tabs>section.active.qualifications>.title a,
+    .section-container.vertical-tabs>section.qualifications>.title a:hover,
+    .section-container.vertical-tabs>section.qualifications>.title a:focus {
+        border-left: 0.4em solid #DCB80B;
+    }
 
-.section-container.vertical-tabs>section.active>.title.experience span:before {
-    color: #2582BC;
-}
+    .section-container.vertical-tabs>section.active.qualifications>.title span:before {
+        color: #DCB80B;
+    }
 
-.section-container.vertical-tabs>section.active>.title.skills a,
-.section-container.vertical-tabs>section>.title.skills a:hover,
-.section-container.vertical-tabs>section>.title.skills a:focus {
-    border-left: 0.4em solid #26A86A;
-}
+    .section-container.vertical-tabs>section.active.experience>.title a,
+    .section-container.vertical-tabs>section.experience>.title a:hover,
+    .section-container.vertical-tabs>section.experience>.title a:focus {
+        border-left: 0.4em solid #2582BC;
+    }
 
-.section-container.vertical-tabs>section.active>.title.skills span:before {
-    color: #26A86A;
-}
+    .section-container.vertical-tabs>section.active.experience>.title span:before {
+        color: #2582BC;
+    }
 
-.section-container.vertical-tabs>section.active>.title.education a,
-.section-container.vertical-tabs>section>.title.education a:hover,
-.section-container.vertical-tabs>section>.title.education a:focus {
-    border-left: 0.4em solid #E4540D;
-}
+    .section-container.vertical-tabs>section.active.skills>.title a,
+    .section-container.vertical-tabs>section.skills>.title a:hover,
+    .section-container.vertical-tabs>section.skills>.title a:focus {
+        border-left: 0.4em solid #26A86A;
+    }
 
-.section-container.vertical-tabs>section.active>.title.education span:before {
-    color: #E4540D;
-}
+    .section-container.vertical-tabs>section.active.skills>.title span:before {
+        color: #26A86A;
+    }
 
+    .section-container.vertical-tabs>section.active.education>.title a,
+    .section-container.vertical-tabs>section.education>.title a:hover,
+    .section-container.vertical-tabs>section.education>.title a:focus {
+        border-left: 0.4em solid #E4540D;
+    }
+
+    .section-container.vertical-tabs>section.active.education>.title span:before {
+        color: #E4540D;
+    }
+    /* SIDEBAR */
+
+    /* PROFILE */
+
+    .profile .image-wrapper {
+        border-radius: 1000px;
+        background-color: #B972D5;
+        width: 248px;
+        height: 248px;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .profile .image-wrapper img {
+        margin: 20px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1048px) {
+        .profile .image-wrapper {
+            width: 170px;
+            height: 170px;
+        }
+    }
+
+    .content>.row>.columns {
+        margin-bottom: 1em;
+    }
+    .id-card>.row>.columns {
+        padding: 0;
+    }
+
+    .id-card .row {
+        border-bottom: 1px solid #B972D5;
+        margin: 0 auto 1em;
+    }
+
+
+    /* END PROFILE */
+
+/* END CONTENT */
