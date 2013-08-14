@@ -118,9 +118,8 @@ div.icon:before {
 
 /* CONTENT */
 
-.content h2:before, .content h3:before {
+.content h2:before {
     content: "+";
-    color: #B972D5;
     font-size: 1.2em;
     margin-right: 0.2em;
 }
@@ -234,11 +233,15 @@ div.icon:before {
 
     /* PROFILE */
 
+    .profile .content h2:before {
+        color: #B972D5;
+    }
+
     .profile .image-wrapper {
         border-radius: 1000px;
         background-color: #B972D5;
-        width: 248px;
-        height: 248px;
+        width: 170px;
+        height: 170px;
         overflow: hidden;
         margin: auto;
     }
@@ -247,26 +250,64 @@ div.icon:before {
         margin: 20px;
     }
 
-    @media only screen and (max-width: 1048px) {
-        .profile .image-wrapper {
-            width: 170px;
-            height: 170px;
-        }
-    }
-
-    .content>.row>.columns {
+    .profile .content>.row>.columns {
         margin-bottom: 1em;
     }
-    .id-card>.row>.columns {
+    .profile .id-card>.row>.columns {
         padding: 0;
     }
 
-    .id-card .row {
+    .profile .id-card>.row:first-child {
+        margin-top: 1.7em;
+    }
+
+    .profile .id-card>.row {
         border-bottom: 1px solid #B972D5;
         margin: 0 auto 1em;
     }
 
+    .profile .id-card .columns.small-6.large-4 {
+        font-weight: bold;
+    }
+
+    .profile h3.icon-terminal:before {
+        font-size: 0.8em;
+        margin-right: 1em;
+    }
+
+    .profile h3.icon-dribbble:before {
+        font-weight: bold;
+        margin-right: 0.4em;
+    }
+
+    .profile h3.icon-video:before {
+        font-size: 0.8em;
+        margin-right: 0.6em;
+    }
 
     /* END PROFILE */
+
+    /* EDUCATION */
+    .education .content h2:before {
+        color: #E4540D;
+    }
+
+    .education .timeline>.row>.columns:first-child {
+        border-right: 0.5em solid #E4540D;
+        position: relative;
+    }
+
+    .timeline-pin {
+        position: absolute;
+        top: 40%;
+        right: -1em;
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 1000px;
+        background-color: #efefef;
+        border: 0.5em solid #E4540D;
+    }
+
+    /* END EDUCATION */
 
 /* END CONTENT */
