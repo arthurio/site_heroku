@@ -1,3 +1,24 @@
+/* GLOBAL */
+
+a.nowrap {
+    white-space: nowrap;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "lato";
+    font-weight: 400;
+}
+
+p.indent {
+    text-indent: 2em;
+    text-align: justify;
+}
+
+p.indent a {
+    text-indent: 0;
+}
+/* END GLOBAL */
+
 /* HEADER */
 .header {
     background-color: #2582BC;
@@ -17,11 +38,6 @@
     margin-bottom: 0.25em;
 }
 
-h1, h2, h3 {
-    font-family: "lato";
-    font-weight: 400;
-}
-
 .header .title h2, .header .title h3 {
     color: #e2e2e2;
 }
@@ -35,7 +51,7 @@ h1, h2, h3 {
     margin-top: 0.625em;
 }
 
-div.icon:before {
+.header div.icon:before {
     font-size: 1.5em;
 }
 
@@ -266,7 +282,7 @@ div.icon:before {
         margin: 0 auto 1em;
     }
 
-    .profile .id-card .columns.small-6.large-4 {
+    .profile .id-card .columns:first-child {
         font-weight: bold;
     }
 
@@ -285,6 +301,10 @@ div.icon:before {
         margin-right: 0.6em;
     }
 
+    .profile .top5 ul .row .icon {
+        color: #945BAA;
+    }
+
     /* END PROFILE */
 
     /* EDUCATION */
@@ -293,19 +313,50 @@ div.icon:before {
     }
 
     .education .timeline>.row>.columns:first-child {
-        border-right: 0.5em solid #E4540D;
+        border-left: 0.5em solid #E4540D;
         position: relative;
     }
 
     .timeline-pin {
         position: absolute;
         top: 40%;
-        right: -1em;
+        left: -6.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+        width: 7em;
+    }
+
+    @media only screen and (max-width: 778px) {
+        .education .timeline>.row>.columns:first-child {
+            border-left: none;
+        }
+    }
+    @media only screen and (min-width: 976px) {
+        .timeline-pin {
+            width: 8em;
+            left: -7.5em;
+        }
+    }
+
+    .timeline-pin .circle {
         height: 1.5em;
         width: 1.5em;
         border-radius: 1000px;
         background-color: #efefef;
         border: 0.5em solid #E4540D;
+    }
+
+    .education ul {
+        list-style: none;
+        margin: 1em;
+    }
+
+    .education h4 {
+        color: #E4540D;
+    }
+
+    .education i {
+        font-size: 0.8em;
     }
 
     /* END EDUCATION */

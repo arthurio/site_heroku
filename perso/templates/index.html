@@ -58,6 +58,12 @@
     <script src="{{ STATIC_URL }}js/foundation.min.js"></script>
     <script>
         $(document).foundation();
+        $(document).ready(function () {
+            // Hack for the section bug with deep_linking
+            if ($('section.active').length === 0) {
+                $('section.profile').addClass('active');
+            }
+        });
     </script>
 
     <script type="text/javascript">
@@ -65,6 +71,7 @@
         _gaq.push(['_setAccount', 'UA-15522286-1']);
         _gaq.push(['_setDomainName', 'arthur-rio.fr']);
         _gaq.push(['_trackPageview']);
+
 
         (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
