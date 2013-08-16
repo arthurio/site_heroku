@@ -9,6 +9,11 @@ h1, h2, h3, h4, h5 {
     font-weight: 400;
 }
 
+.panel h5 {
+    line-height: 1.5em;
+    border-bottom: 1px solid #d9d9d9;
+}
+
 p.indent {
     text-indent: 2em;
     text-align: justify;
@@ -65,6 +70,16 @@ p.indent a, p.indent span {
 ul {
     list-style: none;
     margin: 1em;
+}
+
+.panel ul {
+    text-indent: 5px;
+}
+
+.panel ul li:before{
+    content:"-";
+    position:relative;
+    left:-6px;
 }
 /* END GLOBAL */
 
@@ -371,6 +386,10 @@ ul {
 
     .experience .timeline-pin .circle {
         border: 0.5em solid #2582BC;
+    }
+
+    .experience .title h4 {
+        line-height: 1.65em;
     }
 
     /* END EXPERIENCE */
