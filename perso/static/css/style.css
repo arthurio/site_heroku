@@ -14,7 +14,7 @@ p.indent {
     text-align: justify;
 }
 
-p.indent a {
+p.indent a, p.indent span {
     text-indent: 0;
 }
 
