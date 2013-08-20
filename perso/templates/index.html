@@ -70,7 +70,12 @@
             // Hack for the section bug with deep_linking
             if ($('section.active').length === 0) {
                 $('section.profile').addClass('active');
+            } else {
+                var current = $('section.active>.title a').attr('href').replace('#', '.');
+                $('#sidebar li.profile').removeClass('active');
+                $('#sidebar li' + current).addClass('active');
             }
+
             // nav
             $(document).on('click', '#nav', function (e) {
                 e.preventDefault();
