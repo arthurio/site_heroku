@@ -82,6 +82,10 @@
                 $('body').toggleClass('active');
             });
 
+            $(window).on('resize', function () {
+                $('body').removeClass('active');
+            });
+
             $(document).on('click', '#sidebar li>a', function (e) {
                 $('#sidebar li').removeClass('active');
                 $(this).parent().addClass('active')
