@@ -2,7 +2,7 @@
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<!--[if gt IE 8]><!--><html class="js no-touch svg inlinesvg svgclippaths no-ie8compat"><!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -36,18 +36,26 @@
     <!-- JAVASCRIPT -->
     <script src="{{ STATIC_URL }}js/vendor/custom.modernizr.js"></script>
 </head>
-<body>
-    <header class="header" data-magellan-destination="header" id="header">
-        {% include "header.html" %}
-    </header>
+<body class="antialiased off-canvas hide-extras">
+    <section class="main">
+        <header class="header" data-magellan-destination="header" id="header">
+            {% include "header.html" %}
+        </header>
 
-    <div id="content">
-        {% include "content.html" %}
-    </div>
+        <a id="nav" href="#sidebar" data-magellan-expedition="fixed" class="show-for-small sidebar-button">{% include "nav.html" %}</a>
 
-    <footer class="footer">
-        {% include "footer.html" %}
-    </footer>
+        <div id="content">
+            {% include "content.html" %}
+        </div>
+
+        <footer class="footer">
+            {% include "footer.html" %}
+        </footer>
+    </section>
+
+    <aside id="sidebar" role="complementary">
+        {% include "sidebar.html" %}
+    </aside>
 
     <!-- Check for Zepto support, load jQuery if necessary -->
     <script>
@@ -63,6 +71,18 @@
             if ($('section.active').length === 0) {
                 $('section.profile').addClass('active');
             }
+            // nav
+            $(document).on('click', '#nav', function (e) {
+                e.preventDefault();
+                $('body').toggleClass('active');
+            });
+
+            $(document).on('click', '#sidebar li>a', function (e) {
+                $('#sidebar li').removeClass('active');
+                $(this).parent().addClass('active')
+                $('body').toggleClass('active');
+                window.location.hash = '#header';
+            });
         });
     </script>
 

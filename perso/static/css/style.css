@@ -1,5 +1,62 @@
 /* GLOBAL */
 
+a img {
+    border: none;
+}
+
+body.off-canvas {
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    body.off-canvas {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+}
+
+.antialiased {
+    -webkit-font-smoothing: antialiased;
+}
+
+.main {
+    width: 100%;
+}
+
+.main:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    background: #fff;
+}
+
+.main {
+    margin-left: 0;
+    float: right;
+    z-index: 1;
+    position: relative;
+    background: #fff;
+}
+
+
+.active .main {
+    margin-right: -85%;
+}
+
+.html, .css, .scss, .js {
+    position: relative;
+}
+@media (max-width: 767px) {
+    html {
+        overflow-x: hidden;
+    }
+}
+
 a.nowrap {
     white-space: nowrap;
 }
@@ -166,35 +223,131 @@ ul {
 
 /* NAV */
 
-[data-magellan-expedition] .sub-nav {
-    max-width: 1048px;
-    margin: -0.25em auto 1.125em;
+#nav h4.icon-menu:before {
+    margin-right: 1em;
 }
 
-[data-magellan-expedition] [data-magellan-arrival] {
-    text-align: center;
-}
-[data-magellan-expedition] [data-magellan-arrival].active {
-    background-color: #919EA0;
-    -webkit-border-radius: 1000px;
-    border-radius: 1000px;
-    font-weight: normal;
-    padding: 0.1875em 0.5625em;
-
-}
-[data-magellan-expedition] [data-magellan-arrival] a {
-    color: #999999;
-    font-size: 0.8em;
+#nav {
+    background-color: #222;
 }
 
-[data-magellan-expedition] [data-magellan-arrival].active a {
-    color: #fff;
+#nav h4 {
+    color: #efefef;
 }
 
-.small-block-grid-3.large-block-grid-6 > li {
-    padding: 0 0.625em 1.25em;
+#nav:hover {
+    background: #333;
 }
+
 /* END NAV */
+
+/* ASIDE */
+    #sidebar {
+        position: fixed;
+        background: #fff;
+        height: 100%;
+        padding: 0px;
+        -webkit-box-shadow: inset -2px 0px 8px -1px #111111;
+        box-shadow: inset -2px 0px 8px -1px #111111;
+        padding-top: 10px;
+        width: 85%;
+        font-size: 1.5em;
+    }
+
+    #sidebar ul {
+        margin: 3em 3%;
+    }
+    #sidebar ul li {
+        background: #efefef;
+    }
+
+    #sidebar ul li,
+    #sidebar ul li>a span.icon:before {
+        padding: 0;
+        margin: 0;
+        height: 2em;
+        line-height: 2em;
+    }
+
+    #sidebar ul li>a {
+        color: #555;
+        text-align: left;
+        padding-left: 2.5em;
+        padding-right: 1.5em;
+    }
+
+    #sidebar ul li>a span.icon:before {
+        font-size: 1em;
+        position: absolute;
+        margin-left: -2em;
+    }
+
+    #sidebar ul li:hover a {
+        background: #d5d5d5;
+    }
+
+    #sidebar ul li.active>a {
+        color: #fff!important;
+        background: #4d4d4d;
+        font-weight: normal;
+    }
+
+    #sidebar ul li>a {
+        border-left: 0.3em solid #ccc;
+    }
+
+    #sidebar ul li.active.profile>a,
+    #sidebar ul li.profile>a:hover,
+    #sidebar ul li.profile>a:focus {
+        border-left-color: #B972D5;
+    }
+
+    #sidebar ul li.active.profile span:before {
+        color: #B972D5;
+    }
+
+    #sidebar ul li.active.qualifications>a,
+    #sidebar ul li.qualifications>a:hover,
+    #sidebar ul li.qualifications>a:focus {
+        border-left-color: #DCB80B;
+    }
+
+    #sidebar ul li.active.qualifications span:before {
+        color: #DCB80B;
+    }
+
+    #sidebar ul li.active.experience>a,
+    #sidebar ul li.experience>a:hover,
+    #sidebar ul li.experience>a:focus {
+        border-left-color: #2582BC;
+    }
+
+    #sidebar ul li.active.experience span:before {
+        color: #2582BC;
+    }
+
+    #sidebar ul li.active.skills>a,
+    #sidebar ul li.skills>a:hover,
+    #sidebar ul li.skills>a:focus {
+        border-left-color: #26A86A;
+    }
+
+    #sidebar ul li.active.skills span:before {
+        color: #26A86A;
+    }
+
+    #sidebar ul li.active.education>a,
+    #sidebar ul li.education>a:hover,
+    #sidebar ul li.education>a:focus {
+        border-left-color: #E4540D;
+    }
+
+    #sidebar ul li.active.education span:before {
+        color: #E4540D;
+    }
+
+/* END ASIDE */
+
 
 /* CONTENT */
 
@@ -204,7 +357,7 @@ ul {
     margin-right: 0.2em;
 }
 
-    /* SIDEBAR */
+    /* SECTIONS */
 
     .section-container.vertical-tabs {
         border: none;
@@ -227,13 +380,6 @@ ul {
         border: none;
         min-height: 0 !important;
         margin: 0.5em;
-    }
-
-    .section-container.vertical-tabs>section.active {
-    }
-
-    .section-container.vertical-tabs>section>.title,
-    .section-container.vertical-tabs>section.active>.title{
     }
 
     .section-container.vertical-tabs>section>.title {
@@ -263,7 +409,7 @@ ul {
     .section-container.vertical-tabs>section.active.profile>.title a,
     .section-container.vertical-tabs>section.profile>.title a:hover,
     .section-container.vertical-tabs>section.profile>.title a:focus {
-        border-left: 0.4em solid #B972D5;
+        border-left-color: #B972D5;
     }
 
     .section-container.vertical-tabs>section.active.profile>.title span:before {
@@ -273,7 +419,7 @@ ul {
     .section-container.vertical-tabs>section.active.qualifications>.title a,
     .section-container.vertical-tabs>section.qualifications>.title a:hover,
     .section-container.vertical-tabs>section.qualifications>.title a:focus {
-        border-left: 0.4em solid #DCB80B;
+        border-left-color: #DCB80B;
     }
 
     .section-container.vertical-tabs>section.active.qualifications>.title span:before {
@@ -283,7 +429,7 @@ ul {
     .section-container.vertical-tabs>section.active.experience>.title a,
     .section-container.vertical-tabs>section.experience>.title a:hover,
     .section-container.vertical-tabs>section.experience>.title a:focus {
-        border-left: 0.4em solid #2582BC;
+       border-left-color: #2582BC;
     }
 
     .section-container.vertical-tabs>section.active.experience>.title span:before {
@@ -293,7 +439,7 @@ ul {
     .section-container.vertical-tabs>section.active.skills>.title a,
     .section-container.vertical-tabs>section.skills>.title a:hover,
     .section-container.vertical-tabs>section.skills>.title a:focus {
-        border-left: 0.4em solid #26A86A;
+        border-left-color: #26A86A;
     }
 
     .section-container.vertical-tabs>section.active.skills>.title span:before {
@@ -303,13 +449,13 @@ ul {
     .section-container.vertical-tabs>section.active.education>.title a,
     .section-container.vertical-tabs>section.education>.title a:hover,
     .section-container.vertical-tabs>section.education>.title a:focus {
-        border-left: 0.4em solid #E4540D;
+        border-left-color: #E4540D;
     }
 
     .section-container.vertical-tabs>section.active.education>.title span:before {
         color: #E4540D;
     }
-    /* SIDEBAR */
+    /* SECTIONS */
 
     /* PROFILE */
 
@@ -380,16 +526,12 @@ ul {
         color: #2582BC;
     }
 
-    .experience .timeline>.row>.columns:first-child {
-        border-left: 0.5em solid #2582BC;
-    }
-
-    .experience .timeline-pin .circle {
-        border: 0.5em solid #2582BC;
-    }
-
     .experience .title h4 {
         line-height: 1.65em;
+    }
+
+    .experience .panel img {
+        max-height: 4em;
     }
 
     /* END EXPERIENCE */
