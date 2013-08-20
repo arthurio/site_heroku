@@ -48,6 +48,12 @@ body.off-canvas {
     margin-right: -85%;
 }
 
+@media only screen and (min-width: 768px) {
+    .active .main {
+        margin-right: 0;
+    }
+}
+
 .html, .css, .scss, .js {
     position: relative;
 }
