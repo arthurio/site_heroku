@@ -1,5 +1,9 @@
 /* GLOBAL */
 
+html.active {
+    overflow: hidden;
+}
+
 a img {
     border: none;
 }
@@ -42,7 +46,6 @@ body.off-canvas {
     position: relative;
     background: #fff;
 }
-
 
 .active .main {
     margin-right: -85%;
@@ -245,6 +248,10 @@ ul {
     background: #333;
 }
 
+.active #nav {
+    left: 85%;
+}
+
 /* END NAV */
 
 /* ASIDE */
@@ -350,6 +357,12 @@ ul {
 
     #sidebar ul li.active.education span:before {
         color: #E4540D;
+    }
+
+    @media only screen and (min-width: 768px) {
+        #sidebar {
+            display: none;
+        }
     }
 
 /* END ASIDE */

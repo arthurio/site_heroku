@@ -2,7 +2,7 @@
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html class="js no-touch svg inlinesvg svgclippaths no-ie8compat"><!--<![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -53,7 +53,7 @@
         </footer>
     </section>
 
-    <aside id="sidebar" role="complementary">
+    <aside id="sidebar" class="complementary">
         {% include "sidebar.html" %}
     </aside>
 
@@ -79,17 +79,17 @@
             // nav
             $(document).on('click', '#nav', function (e) {
                 e.preventDefault();
-                $('body').toggleClass('active');
+                $('html').toggleClass('active');
             });
 
             $(window).on('resize', function () {
-                $('body').removeClass('active');
+                $('html').removeClass('active');
             });
 
             $(document).on('click', '#sidebar li>a', function (e) {
                 $('#sidebar li').removeClass('active');
                 $(this).parent().addClass('active')
-                $('body').toggleClass('active');
+                $('html').toggleClass('active');
                 window.location.hash = '#header';
             });
         });
