@@ -309,54 +309,14 @@ ul {
         border-left: 0.3em solid #ccc;
     }
 
-    #sidebar ul li.active.profile>a,
-    #sidebar ul li.profile>a:hover,
-    #sidebar ul li.profile>a:focus {
-        border-left-color: #B972D5;
-    }
-
-    #sidebar ul li.active.profile span:before {
-        color: #B972D5;
-    }
-
-    #sidebar ul li.active.qualifications>a,
-    #sidebar ul li.qualifications>a:hover,
-    #sidebar ul li.qualifications>a:focus {
-        border-left-color: #DCB80B;
-    }
-
-    #sidebar ul li.active.qualifications span:before {
-        color: #DCB80B;
-    }
-
-    #sidebar ul li.active.experience>a,
-    #sidebar ul li.experience>a:hover,
-    #sidebar ul li.experience>a:focus {
+    #sidebar ul li.active>a,
+    #sidebar ul li>a:hover,
+    #sidebar ul li>a:focus {
         border-left-color: #2582BC;
     }
 
-    #sidebar ul li.active.experience span:before {
+    #sidebar ul li.active span:before {
         color: #2582BC;
-    }
-
-    #sidebar ul li.active.skills>a,
-    #sidebar ul li.skills>a:hover,
-    #sidebar ul li.skills>a:focus {
-        border-left-color: #26A86A;
-    }
-
-    #sidebar ul li.active.skills span:before {
-        color: #26A86A;
-    }
-
-    #sidebar ul li.active.education>a,
-    #sidebar ul li.education>a:hover,
-    #sidebar ul li.education>a:focus {
-        border-left-color: #E4540D;
-    }
-
-    #sidebar ul li.active.education span:before {
-        color: #E4540D;
     }
 
     @media only screen and (min-width: 768px) {
@@ -374,6 +334,7 @@ ul {
     content: "+";
     font-size: 1.2em;
     margin-right: 0.2em;
+    color: #2582BC;
 }
 
     /* SECTIONS */
@@ -425,78 +386,35 @@ ul {
         border-left: 0.4em solid #ccc;
     }
 
-    .section-container.vertical-tabs>section.active.profile>.title a,
-    .section-container.vertical-tabs>section.profile>.title a:hover,
-    .section-container.vertical-tabs>section.profile>.title a:focus {
-        border-left-color: #B972D5;
-    }
-
-    .section-container.vertical-tabs>section.active.profile>.title span:before {
-        color: #B972D5;
-    }
-
-    .section-container.vertical-tabs>section.active.qualifications>.title a,
-    .section-container.vertical-tabs>section.qualifications>.title a:hover,
-    .section-container.vertical-tabs>section.qualifications>.title a:focus {
-        border-left-color: #DCB80B;
-    }
-
-    .section-container.vertical-tabs>section.active.qualifications>.title span:before {
-        color: #DCB80B;
-    }
-
-    .section-container.vertical-tabs>section.active.experience>.title a,
-    .section-container.vertical-tabs>section.experience>.title a:hover,
-    .section-container.vertical-tabs>section.experience>.title a:focus {
+    .section-container.vertical-tabs>section.active>.title a,
+    .section-container.vertical-tabs>section>.title a:hover,
+    .section-container.vertical-tabs>section>.title a:focus {
        border-left-color: #2582BC;
     }
 
-    .section-container.vertical-tabs>section.active.experience>.title span:before {
+    .section-container.vertical-tabs>section.active>.title span:before {
         color: #2582BC;
     }
 
-    .section-container.vertical-tabs>section.active.skills>.title a,
-    .section-container.vertical-tabs>section.skills>.title a:hover,
-    .section-container.vertical-tabs>section.skills>.title a:focus {
-        border-left-color: #26A86A;
-    }
-
-    .section-container.vertical-tabs>section.active.skills>.title span:before {
-        color: #26A86A;
-    }
-
-    .section-container.vertical-tabs>section.active.education>.title a,
-    .section-container.vertical-tabs>section.education>.title a:hover,
-    .section-container.vertical-tabs>section.education>.title a:focus {
-        border-left-color: #E4540D;
-    }
-
-    .section-container.vertical-tabs>section.active.education>.title span:before {
-        color: #E4540D;
-    }
     /* SECTIONS */
 
     /* PROFILE */
 
-    .profile .content h2:before {
-        color: #B972D5;
-    }
-
     .profile .image-wrapper {
-        border-radius: 1000px;
-        background-color: #B972D5;
-        width: 170px;
-        height: 170px;
         overflow: hidden;
-        margin: auto;
+        text-align: center;
+        border-radius: 3px;
+        width: 133px;
+        height: 150px;
+        margin: 0 auto;
     }
 
     .profile .image-wrapper img {
-        margin: 20px;
+        margin-top: -15px;
     }
 
     .profile .content>.row>.columns {
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
     }
     .profile .id-card>.row>.columns {
         padding: 0;
@@ -507,7 +425,6 @@ ul {
     }
 
     .profile .id-card>.row {
-        border-bottom: 1px solid #B972D5;
         margin: 0 auto 1em;
     }
 
@@ -531,15 +448,12 @@ ul {
     }
 
     .profile .top5 ul .row .icon {
-        color: #945BAA;
+        color: #2582BC;
     }
 
     /* END PROFILE */
 
     /* EXPERIENCE */
-    .experience .content h2:before {
-        color: #2582BC;
-    }
 
     .experience h4 {
         color: #2582BC;
@@ -556,9 +470,6 @@ ul {
     /* END EXPERIENCE */
 
     /* SKILLS */
-    .skills .content h2:before {
-        color: #26A86A;
-    }
 
     .skills .panel>.row {
         margin-top: 0.5em;
@@ -575,7 +486,7 @@ ul {
     }
 
     .skills .panel>.row>.columns:first-child {
-        background-color: #26A86A;
+        background-color: #2582BC;
     }
 
     .skills .panel>.row>.columns:last-child {
@@ -585,12 +496,9 @@ ul {
     /* END SKILLS */
 
     /* EDUCATION */
-    .education .content h2:before {
-        color: #E4540D;
-    }
 
     .education h4 {
-        color: #E4540D;
+        color: #2582BC;
     }
 
     .education i {
@@ -598,11 +506,11 @@ ul {
     }
 
     .education .timeline>.row>.columns:first-child {
-        border-left: 0.5em solid #E4540D;
+        border-left: 0.5em solid #2582BC;
     }
 
     .education .timeline-pin .circle {
-        border: 0.5em solid #E4540D;
+        border: 0.5em solid #2582BC;
     }
 
     /* END EDUCATION */
