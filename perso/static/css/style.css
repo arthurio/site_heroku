@@ -51,6 +51,16 @@ body.off-canvas {
     margin-right: -85%;
 }
 
+.complentary, .main {
+    display: block;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: 0.08s all;
+    -moz-transition: 0.08s all;
+    -o-transition: 0.8s all;
+    transition: 0.08s all;
+}
+
 @media only screen and (min-width: 768px) {
     .active .main {
         margin-right: 0;
@@ -238,6 +248,10 @@ ul {
 
 #nav {
     background-color: #222;
+    -webkit-transition: 0.08s all;
+    -moz-transition: 0.08s all;
+    -o-transition: 0.8s all;
+    transition: 0.08s all;
 }
 
 #nav h4 {
@@ -257,18 +271,18 @@ ul {
 /* ASIDE */
     #sidebar {
         position: fixed;
-        background: #fff;
+        background: #333;
         height: 100%;
         padding: 0px;
         -webkit-box-shadow: inset -2px 0px 8px -1px #111111;
         box-shadow: inset -2px 0px 8px -1px #111111;
-        padding-top: 10px;
         width: 85%;
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     #sidebar ul {
-        margin: 3em 3%;
+        margin-right: 0.1em;
+        padding: 0;
     }
     #sidebar ul li {
         background: #efefef;
@@ -278,21 +292,20 @@ ul {
     #sidebar ul li>a span.icon:before {
         padding: 0;
         margin: 0;
-        height: 2em;
-        line-height: 2em;
     }
 
     #sidebar ul li>a {
         color: #555;
         text-align: left;
-        padding-left: 2.5em;
-        padding-right: 1.5em;
+        padding: 0.9375em;
+        padding-left: 3em;
     }
 
     #sidebar ul li>a span.icon:before {
-        font-size: 1em;
+        font-size: 1.5em;
         position: absolute;
-        margin-left: -2em;
+        margin-left: -1.5em;
+        line-height: 1em;
     }
 
     #sidebar ul li:hover a {
@@ -487,6 +500,8 @@ ul {
 
     .skills .panel>.row>.columns:first-child {
         background-color: #2582BC;
+        color: #e2e2e2;
+        font-weight: bold;
     }
 
     .skills .panel>.row>.columns:last-child {
