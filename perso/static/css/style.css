@@ -90,6 +90,10 @@ h1, h2, h3, h4, h5 {
     border-bottom: 1px solid #d9d9d9;
 }
 
+.panel {
+    border-radius: 3px;
+}
+
 p.indent {
     text-indent: 2em;
     text-align: justify;
@@ -184,7 +188,11 @@ ul {
 
 .header .contact a:focus, .header .contact a:hover{
     color: #2582BC;
-    background: #222;
+}
+
+.header .contact li .inner:hover,
+.header .contact li .inner:focus {
+    background-color: #222;
 }
 
 .header ul.small-block-grid-3.large-block-grid-3 {
@@ -197,7 +205,8 @@ ul {
 
 .header .contact li .inner {
     text-align: center;
-    background: #1F72A6;
+    background-color: #1F72A6;
+    border-radius: 3px;
 }
 
 .header .contact li .inner > a {
@@ -419,12 +428,12 @@ ul {
         text-align: center;
         border-radius: 3px;
         width: 133px;
-        height: 150px;
+        height: 160px;
         margin: 0 auto;
     }
 
     .profile .image-wrapper img {
-        margin-top: -15px;
+        margin-top: -5px;
     }
 
     .profile .content>.row>.columns {
@@ -439,7 +448,7 @@ ul {
     }
 
     .profile .id-card>.row {
-        margin: 0 auto 1em;
+        margin: 0 auto 0.5em;
     }
 
     .profile .id-card .columns:first-child {
