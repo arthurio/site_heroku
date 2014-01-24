@@ -35,6 +35,9 @@
                 <li>CSS 3</li>
                 <li>Jenkins Continuous Integration Service</li>
                 <li>Soap/Rest API</li>
+                <li>RabbitMQ/Celery</li>
+                <li>Redis</li>
+                <li>Solr</li>
             </ul>
         </div>
     </div>
@@ -52,9 +55,11 @@
         <h4>January 2011 - June 2011</h4>
     </div>
 </div>
-<div class="row">
+<div class="row" ng-controller="RecommendationController as recommendation">
     <div class="small-12 large-8 columns">
         <p class="indent">Overhaul of the timetable information system for the SNCF.</p>
+        <p class="indent"><span class="icon icon-quote-left"></span><span ng-bind-html="recommendation.capgemini.text"></span><span class="icon icon-quote-right"></span><br/><i><strong>Bastien Léoment</strong> - [[recommendation.capgemini.author]]</i></p>
+         <div class="button" ng-click="recommendation.changeVersion('capgemini')">[[recommendation.capgemini.button]]</div>
     </div>
     <div class="small-12 large-4 columns">
         <div class="panel">
@@ -123,7 +128,7 @@
             <a href="http://www.hightail.com" target="_blank" class="icon icon-link">www.hightail.com</a>
             <h5>Technologies</h5>
             <ul>
-                <li>Microsof Exchange Server</li>
+                <li>Microsoft Exchange Server</li>
                 <li>C#</li>
             </ul>
         </div>
@@ -137,9 +142,11 @@
         <h4>April 2008 - June 2008</h4>
     </div>
 </div>
-<div class="row">
+<div class="row" ng-controller="RecommendationController as recommendation">
     <div class="small-12 large-8 columns">
         <p class="indent">Migration of an existing client application into a web application using the GWT technology.</p>
+        <p class="indent"><span class="icon icon-quote-left"></span><span ng-bind-html="recommendation.cnieg.text"></span><span class="icon icon-quote-right"></span><br/><i><strong>Dominique Arnou</strong> - [[recommendation.cnieg.author]]</i></p>
+        <div class="button" ng-click="recommendation.changeVersion('cnieg')">[[recommendation.cnieg.button]]</div>
     </div>
     <div class="small-12 large-4 columns">
         <div class="panel">

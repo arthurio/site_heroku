@@ -152,11 +152,11 @@ ul {
     margin: 1em;
 }
 
-.panel ul {
+.panel ul, ul.dash {
     text-indent: 5px;
 }
 
-.panel ul li:before{
+.panel ul li:before, ul.dash li:before {
     content:"-";
     position:relative;
     left:-6px;

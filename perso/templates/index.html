@@ -2,7 +2,7 @@
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<!--[if gt IE 8]><!--><html ng-app="SitePersoApp"><!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -35,6 +35,10 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
     <!-- JAVASCRIPT -->
     <script src="{{ STATIC_URL }}js/vendor/custom.modernizr.js"></script>
+    <script src="{{ STATIC_URL }}js/vendor/angular.min.js"></script>
+    <script src="{{ STATIC_URL }}js/vendor/angular-sanitize.min.js"></script>
+    <script src="{{ STATIC_URL }}js/script.js"></script>
+    <script src="{{ STATIC_URL }}js/i18n.js"></script>
 </head>
 <body class="antialiased off-canvas hide-extras">
     <section class="main">
