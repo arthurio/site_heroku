@@ -474,6 +474,16 @@ ul {
         color: #2582BC;
     }
 
+    .arthur-hockey-gear {
+        position: absolute;
+        display: none;
+    }
+
+    #arthur-image:hover .arthur-hockey-gear {
+        display: block;
+        top: 0;
+    }
+
     /* END PROFILE */
 
     /* EXPERIENCE */
