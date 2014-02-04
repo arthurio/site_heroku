@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?40353014');
-  src: url('../font/fontello.eot?40353014#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff?40353014') format('woff'),
-       url('../font/fontello.ttf?40353014') format('truetype'),
-       url('../font/fontello.svg?40353014#fontello') format('svg');
+  src: url('../font/fontello.eot?92781517');
+  src: url('../font/fontello.eot?92781517#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?92781517') format('woff'),
+       url('../font/fontello.ttf?92781517') format('truetype'),
+       url('../font/fontello.svg?92781517#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?40353014#fontello') format('svg');
+    src: url('../font/fontello.svg?92781517#fontello') format('svg');
   }
 }
 */
@@ -50,81 +50,82 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-wikipedia:before { content: '\e83e'; } /* '' */
-.icon-at:before { content: '\e831'; } /* '' */
-.icon-email:before { content: '\e80e'; } /* '' */
-.icon-home:before { content: '\e80d'; } /* '' */
+.icon-mail:before { content: '\e800'; } /* '' */
+.icon-googleplus-rect:before { content: '\e830'; } /* '' */
+.icon-heart-empty:before { content: '\e82f'; } /* '' */
 .icon-star:before { content: '\e802'; } /* '' */
 .icon-star-empty:before { content: '\e803'; } /* '' */
-.icon-th-list:before { content: '\e808'; } /* '' */
-.icon-heart-empty:before { content: '\e82f'; } /* '' */
-.icon-heart:before { content: '\e82c'; } /* '' */
-.icon-th:before { content: '\e82b'; } /* '' */
-.icon-cog:before { content: '\e820'; } /* '' */
-.icon-attention:before { content: '\e81e'; } /* '' */
-.icon-flight:before { content: '\e843'; } /* '' */
-.icon-mail:before { content: '\e800'; } /* '' */
-.icon-pencil:before { content: '\e819'; } /* '' */
-.icon-check:before { content: '\e847'; } /* '' */
-.icon-cancel:before { content: '\e848'; } /* '' */
-.icon-plus-circled:before { content: '\e809'; } /* '' */
-.icon-forward:before { content: '\e815'; } /* '' */
-.icon-address-book:before { content: '\e840'; } /* '' */
 .icon-star-half:before { content: '\e804'; } /* '' */
-.icon-help-circled:before { content: '\e846'; } /* '' */
-.icon-info-circled:before { content: '\e845'; } /* '' */
+.icon-star-half-alt:before { content: '\e805'; } /* '' */
+.icon-camera:before { content: '\e806'; } /* '' */
 .icon-th-large:before { content: '\e81d'; } /* '' */
-.icon-vcard:before { content: '\e822'; } /* '' */
+.icon-th:before { content: '\e82b'; } /* '' */
+.icon-th-list:before { content: '\e808'; } /* '' */
+.icon-plus-circled:before { content: '\e809'; } /* '' */
+.icon-home:before { content: '\e80d'; } /* '' */
+.icon-thumbs-up:before { content: '\e80f'; } /* '' */
+.icon-thumbs-down:before { content: '\e811'; } /* '' */
+.icon-thumbs-up-alt:before { content: '\e810'; } /* '' */
+.icon-thumbs-down-alt:before { content: '\e812'; } /* '' */
+.icon-reply:before { content: '\e813'; } /* '' */
+.icon-reply-all:before { content: '\e814'; } /* '' */
+.icon-forward:before { content: '\e815'; } /* '' */
+.icon-quote-left:before { content: '\e816'; } /* '' */
+.icon-quote-right:before { content: '\e817'; } /* '' */
+.icon-code:before { content: '\e818'; } /* '' */
+.icon-pencil:before { content: '\e819'; } /* '' */
+.icon-print:before { content: '\e842'; } /* '' */
+.icon-attention:before { content: '\e81e'; } /* '' */
+.icon-direction:before { content: '\e81c'; } /* '' */
 .icon-trash:before { content: '\e81b'; } /* '' */
-.icon-window:before { content: '\e835'; } /* '' */
-.icon-chart-pie:before { content: '\e83b'; } /* '' */
-.icon-database:before { content: '\e83a'; } /* '' */
+.icon-doc:before { content: '\e81a'; } /* '' */
+.icon-menu:before { content: '\e83f'; } /* '' */
+.icon-cog:before { content: '\e820'; } /* '' */
+.icon-calendar:before { content: '\e823'; } /* '' */
+.icon-calendar-empty:before { content: '\e824'; } /* '' */
+.icon-headphones:before { content: '\e801'; } /* '' */
+.icon-lightbulb:before { content: '\e826'; } /* '' */
 .icon-down-open:before { content: '\e827'; } /* '' */
 .icon-left-open:before { content: '\e828'; } /* '' */
 .icon-right-open:before { content: '\e829'; } /* '' */
 .icon-up-open:before { content: '\e82a'; } /* '' */
-.icon-terminal:before { content: '\e841'; } /* '' */
-.icon-twitter:before { content: '\e84c'; } /* '' */
-.icon-github-circled:before { content: '\e837'; } /* '' */
-.icon-beaker:before { content: '\e832'; } /* '' */
-.icon-menu:before { content: '\e83f'; } /* '' */
-.icon-lightbulb:before { content: '\e826'; } /* '' */
-.icon-suitcase:before { content: '\e81f'; } /* '' */
-.icon-desktop:before { content: '\e80a'; } /* '' */
+.icon-heart:before { content: '\e82c'; } /* '' */
 .icon-laptop:before { content: '\e807'; } /* '' */
 .icon-mobile:before { content: '\e839'; } /* '' */
-.icon-quote-left:before { content: '\e816'; } /* '' */
-.icon-quote-right:before { content: '\e817'; } /* '' */
-.icon-reply:before { content: '\e813'; } /* '' */
-.icon-code:before { content: '\e818'; } /* '' */
-.icon-reply-all:before { content: '\e814'; } /* '' */
-.icon-star-half-alt:before { content: '\e805'; } /* '' */
-.icon-direction:before { content: '\e81c'; } /* '' */
-.icon-calendar-empty:before { content: '\e824'; } /* '' */
-.icon-html5:before { content: '\e834'; } /* '' */
-.icon-thumbs-up-alt:before { content: '\e810'; } /* '' */
-.icon-thumbs-down-alt:before { content: '\e812'; } /* '' */
-.icon-youtube-play:before { content: '\e84e'; } /* '' */
+.icon-globe:before { content: '\e80b'; } /* '' */
+.icon-briefcase:before { content: '\e80c'; } /* '' */
+.icon-suitcase:before { content: '\e81f'; } /* '' */
+.icon-book:before { content: '\e821'; } /* '' */
+.icon-beaker:before { content: '\e832'; } /* '' */
 .icon-apple:before { content: '\e833'; } /* '' */
 .icon-dribbble:before { content: '\e825'; } /* '' */
-.icon-skype:before { content: '\e84b'; } /* '' */
 .icon-facebook-squared:before { content: '\e849'; } /* '' */
-.icon-googleplus-rect:before { content: '\e830'; } /* '' */
+.icon-github-circled:before { content: '\e837'; } /* '' */
+.icon-html5:before { content: '\e834'; } /* '' */
 .icon-linkedin-squared:before { content: '\e84d'; } /* '' */
-.icon-globe:before { content: '\e80b'; } /* '' */
-.icon-globe-1:before { content: '\e84a'; } /* '' */
-.icon-graduation-cap:before { content: '\e838'; } /* '' */
-.icon-headphones:before { content: '\e801'; } /* '' */
-.icon-video:before { content: '\e836'; } /* '' */
-.icon-thumbs-up:before { content: '\e80f'; } /* '' */
-.icon-thumbs-down:before { content: '\e811'; } /* '' */
+.icon-skype:before { content: '\e84b'; } /* '' */
+.icon-twitter:before { content: '\e84c'; } /* '' */
+.icon-youtube-play:before { content: '\e84e'; } /* '' */
 .icon-user:before { content: '\e82d'; } /* '' */
-.icon-briefcase:before { content: '\e80c'; } /* '' */
-.icon-doc:before { content: '\e81a'; } /* '' */
-.icon-calendar:before { content: '\e823'; } /* '' */
+.icon-check:before { content: '\e847'; } /* '' */
+.icon-cancel:before { content: '\e848'; } /* '' */
+.icon-help-circled:before { content: '\e846'; } /* '' */
+.icon-info-circled:before { content: '\e845'; } /* '' */
+.icon-link:before { content: '\e844'; } /* '' */
+.icon-vcard:before { content: '\e822'; } /* '' */
+.icon-window:before { content: '\e835'; } /* '' */
+.icon-flight:before { content: '\e843'; } /* '' */
+.icon-chart-pie:before { content: '\e83b'; } /* '' */
 .icon-chart-line:before { content: '\e83c'; } /* '' */
 .icon-chart-bar:before { content: '\e83d'; } /* '' */
-.icon-book:before { content: '\e821'; } /* '' */
-.icon-camera:before { content: '\e806'; } /* '' */
-.icon-link:before { content: '\e844'; } /* '' */
+.icon-graduation-cap:before { content: '\e838'; } /* '' */
+.icon-database:before { content: '\e83a'; } /* '' */
 .icon-wrench:before { content: '\e82e'; } /* '' */
+.icon-globe-1:before { content: '\e84a'; } /* '' */
+.icon-at:before { content: '\e831'; } /* '' */
+.icon-wikipedia:before { content: '\e83e'; } /* '' */
+.icon-email:before { content: '\e80e'; } /* '' */
+.icon-address-book:before { content: '\e840'; } /* '' */
+.icon-video:before { content: '\e836'; } /* '' */
+.icon-terminal:before { content: '\e841'; } /* '' */
+.icon-desktop:before { content: '\e80a'; } /* '' */

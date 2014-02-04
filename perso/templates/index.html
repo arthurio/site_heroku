@@ -1,48 +1,96 @@
-{% extends 'base.html' %}
-{% block css %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
-{% endblock css %}
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html ng-app="SitePersoApp"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="all">
+	<title>Arthur Rio</title>
 
-{% block head_javascript %}
+    <meta name="Description" content="Software engineer at PunchTab, working on the back-end and front-end of the web platform, on the integration with third parties, and building report and anylitics tools. Productwise, in charge of the giveaway widget."/>
+    <meta name="Arthur Rio" content="Arthur Rio">
+    <meta name="keywords" content="Arthur, Rio, Polytech, développeur, ingénieur, logiciel, Palo Alto, developer, software, engineer, python, django, javascript, JQuery, PunchTab">
+    <meta property="fb:admins" content="721178891" />
+    <meta property="og:image" content="http://www.arthur-rio.fr{{ STATIC_URL }}images/picture/bw/tall.png" />
+    <meta property="og:title" content="Arthur Rio | Software Engineer" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://www.arthur-rio.fr"/>
+    <meta property="og:site_name" content="Arthur Rio | Software Engineer"/>
+    <meta property="og:description"
+        content="Software engineer at PunchTab, working on the back-end and front-end of the web platform, on the integration with third parties, and building report and anylitics tools. Productwise, in charge of the giveaway widget."/>
+
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}images/picture/bw/medium.png">
+    <!-- FONTS -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic" rel="stylesheet" type="text/css">
+    <!-- CSS -->
+    <link href="{{ STATIC_URL }}css/fontello.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
+    {% block css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/foundation.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    {% endblock css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/print.css">
+    <!-- JAVASCRIPT -->
     <script src="{{ STATIC_URL }}js/vendor/custom.modernizr.js"></script>
     <script src="{{ STATIC_URL }}js/vendor/angular.min.js"></script>
     <script src="{{ STATIC_URL }}js/vendor/angular-sanitize.min.js"></script>
     <script src="{{ STATIC_URL }}js/script.js"></script>
     <script src="{{ STATIC_URL }}js/i18n.js"></script>
-{% endblock head_javascript %}
+</head>
+<body class="antialiased off-canvas hide-extras">
+    {% block site %}
+    <div id="site">
+        <section class="main">
+            <header class="header" data-magellan-destination="header" id="header">
+                {% include "header.html" %}
+            </header>
 
+            <a id="nav" href="#sidebar" data-magellan-expedition="fixed" class="show-for-small sidebar-button">{% include "nav.html" %}</a>
 
-{% block content %}
-    <section class="main">
-        <header class="header" data-magellan-destination="header" id="header">
-            {% include "header.html" %}
-        </header>
+            <div id="content">
+                {% include "content.html" %}
+            </div>
 
-        <a id="nav" href="#sidebar" data-magellan-expedition="fixed" class="show-for-small sidebar-button">{% include "nav.html" %}</a>
+            <footer class="footer">
+                {% include "footer.html" %}
+            </footer>
+        </section>
 
-        <div id="content">
-            {% include "content.html" %}
-        </div>
+        <aside id="sidebar" class="complementary">
+            {% include "sidebar.html" %}
+        </aside>
+    </div>
+    {% endblock site %}
 
-        <footer class="footer">
-            {% include "footer.html" %}
-        </footer>
-    </section>
-
-    <aside id="sidebar" class="complementary">
-        {% include "sidebar.html" %}
-    </aside>
-{% endblock content %}
-
-{% block body_javascript %}
     <!-- Check for Zepto support, load jQuery if necessary -->
-    <script>
+    <script type="text/javascript">
         document.write('<script src={{ STATIC_URL }}/js/vendor/'
             + ('__proto__' in {} ? 'zepto' : 'jquery')
             + '.js><\/script>');
     </script>
-    <script src="{{ STATIC_URL }}js/foundation.min.js"></script>
-    <script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-15522286-1']);
+        _gaq.push(['_setDomainName', 'arthur-rio.fr']);
+        _gaq.push(['_trackPageview']);
+
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}js/foundation.min.js"></script>
+    <script type="text/javascript">
         $(document).foundation();
         $(document).ready(function () {
             // Hack for the section bug with deep_linking
@@ -64,13 +112,21 @@
                 $('html').removeClass('active');
             });
 
-            $(document).on('click', '#sidebar li>a', function (e) {
-                $('#sidebar li').removeClass('active');
-                $(this).parent().addClass('active')
-                $('html').toggleClass('active');
+            $('#sidebar li>a').on('click', function (e) {
+                if ($(this).parent().hasClass('print')) {
+                    window.open('/resume/');
+                } else {
+                    $('#sidebar li').removeClass('active');
+                    $(this).parent().addClass('active')
+                    $('html').toggleClass('active');
+                }
                 window.location.hash = '#header';
+            });
+
+            $('button.print').click(function () {
+                window.print();
             });
         });
     </script>
-{% endblock body_javascript %}
-
+</body>
+</html>
