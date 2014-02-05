@@ -57,6 +57,20 @@ h1 {
     margin-bottom: 2px;
 }
 
+@media screen (max-width: 800px) {
+    body {
+        width: 100%;
+    }
+
+    .left {
+        width: 30% !important;
+    }
+
+    .right {
+        width: 70%!important;
+    }
+}
+
 @media print {
     body {
         box-shadow: none;
