@@ -1,61 +1,176 @@
 {% extends 'index.html' %}
 
 {% block css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/print.css">
 {% endblock css %}
 
 {% block site %}
 <div class="header">
-    <h1>Arthur Rio</h1>
-    <h2>Software Engineer</h2>
-    <h3>http://www.arthur-rio.fr</h3>
-    <h3>+1 (650) 646-1280</h3>
-    <h3>arthur.rio@me.com</h3>
+    <div class="column left">
+        <h1>Arthur Rio</h1>
+        <h2>Software Engineer</h2>
+    </div>
+    <div class="column right">
+        <h3>arthur.rio@me.com</h3>
+        <h3>+1 (650) 646-1280</h3>
+        <h3>http://www.arthur-rio.fr</h3>
+        <h3>http://www.linkedin.com/in/arthurio</h3>
+    </div>
 </div>
-<div>
+<hr>
+
+<div class="section">
     <h2>Education</h2>
+    <div class="row">
+        <div class="left column">
+            <h4>2008 - 2011</h4>
+        </div>
+        <div class="right column">
+            <h3>Master's degree in Engineering, major computer sciences</h3>
+            <p>Polytechnic School of Nantes University (Polytech Nantes) - Nantes, France</p>
+            <p>Linnæus University, Växjö, Sweden (9th semester)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="left column">
+            <h4>2006 - 2008</h4>
+        </div>
+        <div class="right column">
+            <h3>Two-year degree in Computer Sciences</h3>
+            <p>Higher institute of Computer Sciences of Nantes University, Nantes, France</p>
+        </div>
+    </div>
 </div>
 
-<div>
+<div class="section">
     <h2>Experience</h2>
-    <h3>Software engineer - PunchTab, Palo Alto, USA</h3>
-    <h4>2011 - current</h4>
-    <p>Worked cross-functionally to design, implement and optimize our website. Coupled with developing features and maintaining platform and widgets functionalities.</p>
-    <ul>
-        <li>Designed and developed high-traffic/high-availability APIs and widgets (Python/Django, HTML/CSS/Javascript).</li>
-        <li>Collaborated with the design team to improve the user interface and experience of our publishers admin tools and end-users products.</li>
-        <li>Integrated with third party APIs (REST and SOAP).</li>
-        <li>Integrated with third party Javascript SDKs (Twitter, Facebook, Google+, YouTube).</li>
-        <li>Setup the continuous integration platform.</li>
-        <li>Collaborated with the marketing team for the analysis of the data and the elaboration of customized reports and analytic tools.</li>
-        <li>Database architecture and management (MySql and MongoDB).</li>
-        <li>Client support (chat and tickets).</li>
-    </ul>
-    <p>Technologies: Python, Django, HTML5/CSS3, Javascript, JQuery, Git, MongoDB, MySQL, RabbitMQ, Redis, Jenkins.</p>
+    <div class="row">
+        <div class="left column">
+            <h4>2011 - current</h4>
+        </div>
+        <div class="right column">
+            <h3>Software engineer - PunchTab, Palo Alto, USA</h3>
+            <p>Worked cross-functionally to design, implement and optimize our website. Coupled with developing features and maintaining platform and widgets functionalities.</p>
+            <ul>
+                <li>Designed and developed high-traffic/high-availability APIs and widgets (Python/Django, HTML/CSS/JavaScript).</li>
+                <li>Collaborated with the design team to improve the user interface and experience of our publishers admin tools and end-users products.</li>
+                <li>Integrated with third party APIs (REST and SOAP).</li>
+                <li>Integrated with third party JavaScript SDKs (Twitter, Facebook, Google+, YouTube).</li>
+                <li>Setup the continuous integration platform.</li>
+                <li>Collaborated with the marketing team for the analysis of the data and the elaboration of customized reports and analytic tools.</li>
+                <li>Database architecture and management (MySql and MongoDB).</li>
+                <li>Client support (chat and tickets).</li>
+            </ul>
+            <p>Technologies: Python, Django, HTML5/CSS3, JavaScript, JQuery, Git, MongoDB, MySQL, RabbitMQ, Redis, Jenkins.</p>
+        </div>
+    </div>
 
-    <h3>Intern Software engineer - Capgemini, Nantes, FRANCE.</h3>
-    <h4>January – August 2011 (8 months)</h4>
-    <p>Redesign of the timetable information system for the SNCF Transilien (RER).</p>
-    <ul>
-        <li>Became familiar with the project and its architecture by reading through the existing specifications.</li>
-        <li>Developed new features for the admin interface based on the specs and wrote the according unit tests.</li>
-        <li>Assisted the QA team to create missing unit tests and update the code base (Java/Fitnesse).</li>
-        <li>Built the unit test campaign for the second round of homologation.</li>
-        <li>Participated in the design of the new requirements (UML 2.0, MCD).</li>
-        <li>Implemented the remote monitors health status check functionality (SNMP, MIBs).</li>
-    </ul>
-    <p>Technologies: Java, Flex/ActionScript/MXML, Oracle, Hibernate, Spring.
+    <div class="row">
+        <div class="column left">
+            <h4>2011</h4>
+            <h5>January – August</h5>
+            <h5>(8 months)</h5>
+        </div>
+        <div class="column right">
+            <h3>Intern Software engineer - Capgemini, Nantes, FRANCE.</h3>
+            <p>Redesign of the timetable information system for the SNCF Transilien (RER).</p>
+            <ul>
+                <li>Became familiar with the project and its architecture by reading through the existing specifications.</li>
+                <li>Developed new features for the admin interface based on the specs and wrote the according unit tests.</li>
+                <li>Assisted the QA team to create missing unit tests and update the code base (Java/Fitnesse).</li>
+                <li>Built the unit test campaign for the second round of homologation.</li>
+                <li>Participated in the design of the new requirements (UML 2.0, MCD).</li>
+                <li>Implemented the remote monitors health status check functionality (SNMP, MIBs).</li>
+            </ul>
+            <p>Technologies: Java, Flex/ActionScript/MXML, Oracle, Hibernate, Spring.
+        </div>
+    </div>
 
-    <h3>Intern Software developer - CNIEG, Nantes, FRANCE.</h3>
-    <h4>April – June 2008 (14 weeks)</h4>
-    <p>Study of the GWT framework for the migration of an existing Lotus Notes internal application (Software development requests).</p>
-    <ul>
-        <li>Analyzed, documented and wrote the specification of the existing application.</li>
-        <li>Surveyed the users across multiple services on missing functionalities and bugs.</li>
-        <li>Designed the new application (UML 2.0) and database (MCD) models.</li>
-        <li>Studied, documented and presented GWT and its application in the current environment in front of a committee.</li>
-        <li>Developed a prototype of the new application.</li>
-    </ul>
-    <p>Technologies: Java, GWT, Spring, Hibernate, Oracle, Active Directory, LDAP.</p>
+    <div class="row">
+        <div class="column left">
+            <h4>2008</h4>
+            <h5>April – June</h5>
+            <h5>(14 weeks)</h5>
+        </div>
+        <div class="column right">
+            <h3>Intern Software developer - CNIEG, Nantes, FRANCE.</h3>
+            <p>Study of the GWT framework for the migration of an existing Lotus Notes internal application (Software development requests).</p>
+            <ul>
+                <li>Analyzed, documented and wrote the specification of the existing application.</li>
+                <li>Surveyed the users across multiple services on missing functionalities and bugs.</li>
+                <li>Designed the new application (UML 2.0) and database (MCD) models.</li>
+                <li>Studied, documented and presented GWT and its application in the current environment in front of a committee.</li>
+                <li>Developed a prototype of the new application.</li>
+            </ul>
+            <p>Technologies: Java, GWT, Spring, Hibernate, Oracle, Active Directory, LDAP.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section skills">
+    <h2>Skills & Expertise</h2>
+    <div class="row">
+        <div class="column left">
+            <h4>Back-end</h4>
+        </div>
+        <div class="column right">
+            <p>Python, Java, C#, PHP 5, PL/SQL, MySQL, MongoDB, Redis, RabbitMQ</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column left">
+            <h4>Front-end</h4>
+        </div>
+        <div class="column right">
+            <p>JavaScript, HTML5/CSS3, ActionScript</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column left">
+            <h4>Frameworks</h4>
+        </div>
+        <div class="column right">
+            <p>Django, Spring, Hibernate, GWT, Flex, Foundation, AngularJS</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column left">
+            <h4>Tools</h4>
+        </div>
+        <div class="column right">
+            <p>Git, VI, Eclipse, terminal, Visual Studio, Photoshop, Jazz RPC</p>
+        </div>
+    </div>
+</div>
+
+<div class="section languages">
+    <h2>Languages</h2>
+    <div class="row">
+        <div class="column left">
+            <h4>French</h4>
+        </div>
+        <div class="column right">
+            <p>Mother Tongue</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column left">
+            <h4>English</h4>
+        </div>
+        <div class="column right">
+            <p>Fluent - TOEIC score (2009): 970/990</p>
+        </div>
+    </div>
 </div>
 
 {% endblock site %}
+
+{% block javascript %}
+<script type="text/javascript">
+    (function (window) {
+        $(document).ready(function () {
+            window.print();
+        });
+    }) (window);
+</script>
+{% endblock javascript %}

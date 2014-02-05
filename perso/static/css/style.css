@@ -21,10 +21,6 @@ body.off-canvas {
     }
 }
 
-.antialiased {
-    -webkit-font-smoothing: antialiased;
-}
-
 .main {
     width: 100%;
 }
