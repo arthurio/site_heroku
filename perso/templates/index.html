@@ -91,42 +91,40 @@
 
     <script type="text/javascript" src="{{ STATIC_URL }}js/foundation.min.js"></script>
     <script type="text/javascript">
-        $(document).foundation();
-        $(document).ready(function () {
-            // Hack for the section bug with deep_linking
-            if ($('section.active').length === 0) {
-                $('section.profile').addClass('active');
-            } else {
-                var current = $('section.active>.title a').attr('href').replace('#', '.');
-                $('#sidebar li.profile').removeClass('active');
-                $('#sidebar li' + current).addClass('active');
-            }
-
-            // nav
-            $(document).on('click', '#nav', function (e) {
-                e.preventDefault();
-                $('html').toggleClass('active');
-            });
-
-            $(window).on('resize', function () {
-                $('html').removeClass('active');
-            });
-
-            $('#sidebar li>a').on('click', function (e) {
-                if ($(this).parent().hasClass('print')) {
-                    window.open('/resume/');
+        (function (window, document, undefined) {
+            $(document).foundation();
+            $(document).ready(function () {
+                // Hack for the section bug with deep_linking
+                if ($('section.active').length === 0) {
+                    $('section.profile').addClass('active');
                 } else {
-                    $('#sidebar li').removeClass('active');
-                    $(this).parent().addClass('active')
-                    $('html').toggleClass('active');
+                    var current = $('section.active>.title a').attr('href').replace('#', '.');
+                    $('#sidebar li.profile').removeClass('active');
+                    $('#sidebar li' + current).addClass('active');
                 }
-                window.location.hash = '#header';
-            });
 
-            $('button.print').click(function () {
-                window.print();
+                // nav
+                $(document).on('click', '#nav', function (e) {
+                    e.preventDefault();
+                    $('html').toggleClass('active');
+                });
+
+                $(window).on('resize', function () {
+                    $('html').removeClass('active');
+                });
+
+                $('#sidebar li>a').on('click', function (e) {
+                    if ($(this).parent().hasClass('print')) {
+                        window.open('/resume/');
+                    } else {
+                        $('#sidebar li').removeClass('active');
+                        $(this).parent().addClass('active')
+                        $('html').toggleClass('active');
+                    }
+                    window.location.hash = '#header';
+                });
             });
-        });
+        }) (window, document);
     </script>
     {% block javascript %}
     {% endblock javascript %}
